@@ -25,8 +25,8 @@ jobs:
 
       - name: Get current season and round
         run: |
-          STATUS=$(curl https://api.cartola.globo.com/mercado/status)
+          STATUS=$(curl -s https://api.cartola.globo.com/mercado/status)
           echo SEASON=$(echo $STATUS | jq -r '.temporada') >> $GITHUB_ENV'
           echo ROUND=$(echo $STATUS | jq -r '.rodada_atual') >> $GITHUB_ENV'
       
-      - run: echo $SEASON-$ROUND
+      - run: echo ${{ env.SEASON }}-${{ env.ROUND }}
