@@ -12,8 +12,11 @@ permissions:
 jobs:
   auth:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        url:
+          - https://api.cartola.globo.com/atletas/mercado
     steps:
-
       - name: Authenticate Google Cloud
         uses: google-github-actions/auth@v1
         with:
@@ -23,11 +26,14 @@ jobs:
       - name: Setup Google Cloud
         uses: google-github-actions/setup-gcloud@v1
 
-      - name: Get current season and round
+      - name: Compose file path
         id: status
         run: |
           STATUS=$(curl -s https://api.cartola.globo.com/mercado/status)
-          echo SEASON=$(echo $STATUS | jq -r '.temporada') >> $GITHUB_OUTPUT
-          echo ROUND=$(echo $STATUS | jq -r '.rodada_atual') >> $GITHUB_OUTPUT
+          SEASON=$(echo $STATUS | jq -r '.temporada')
+          ROUND=$(echo $STATUS | jq -r '.rodada_atual')
+          ENDPOINT=$(echo "${{ matrix.url }}" | sed 's/https:\/\/api.cartola.globo.com\///')
+          echo PATH=$ENDPOINT/$ROUND-$SEASON.json >> $GITHUB_OUTPUT
+          
       
-      - run: echo ${{ steps.status.outputs.STATUS }}-${{ steps.status.outputs.ROUND }}.json
+      - run: echo ${{ steps.status.outputs.PATH }}
