@@ -27,7 +27,7 @@ jobs:
         uses: google-github-actions/setup-gcloud@v1
 
       - name: Compose file path
-        id: status
+        id: path
         run: |
           STATUS=$(curl -s https://api.cartola.globo.com/mercado/status)
           SEASON=$(echo $STATUS | jq -r '.temporada')
@@ -36,4 +36,7 @@ jobs:
           echo PATH=$PATH
           echo PATH=$PATH >> $GITHUB_OUTPUT
 
-      - run: echo ${{ steps.status.outputs.PATH }}
+      - name: Upload to Google Cloud Storage
+        run: |
+          curl -s https://api.cartola.globo.com/${{ matrix.url }} -o ${{ steps.path.outputs.path }}
+          gcloud storage cp ${{ steps.path.outputs.path }} gs://cartola/
