@@ -24,9 +24,10 @@ jobs:
         uses: google-github-actions/setup-gcloud@v1
 
       - name: Get current season and round
+        id: status
         run: |
           STATUS=$(curl -s https://api.cartola.globo.com/mercado/status)
-          echo SEASON=$(echo $STATUS | jq -r '.temporada') >> $GITHUB_ENV'
-          echo ROUND=$(echo $STATUS | jq -r '.rodada_atual') >> $GITHUB_ENV'
+          echo SEASON=$(echo $STATUS | jq -r '.temporada') >> $GITHUB_OUTPUT
+          echo ROUND=$(echo $STATUS | jq -r '.rodada_atual') >> $GITHUB_OUTPUT
       
-      - run: echo ${{ env.SEASON }}-${{ env.ROUND }}
+      - run: echo ${{ steps.status.outputs.STATUS }}-${{ steps.status.outputs.ROUND }}.json
