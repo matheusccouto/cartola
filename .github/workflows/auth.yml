@@ -14,8 +14,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        url:
-          - https://api.cartola.globo.com/atletas/mercado
+        endpoint:
+          - atletas/mercado
     steps:
       - name: Authenticate Google Cloud
         uses: google-github-actions/auth@v1
@@ -31,9 +31,7 @@ jobs:
         run: |
           STATUS=$(curl -s https://api.cartola.globo.com/mercado/status)
           SEASON=$(echo $STATUS | jq -r '.temporada')
-          ROUND=$(echo $STATUS | jq -r '.rodada_atual')
-          ENDPOINT=$(echo "${{ matrix.url }}" | sed 's/https:\/\/api.cartola.globo.com\///')
-          echo PATH=$ENDPOINT/$ROUND-$SEASON.json >> $GITHUB_OUTPUT
-          
-      
+          ROUND=$(printf %02d $(echo $STATUS | jq -r '.rodada_atual'))
+          echo PATH=${{ matrix.url }}/$SEASON-$ROUND.json >> $GITHUB_OUTPUT
+
       - run: echo ${{ steps.status.outputs.PATH }}
