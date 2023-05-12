@@ -32,6 +32,8 @@ jobs:
           STATUS=$(curl -s https://api.cartola.globo.com/mercado/status)
           SEASON=$(echo $STATUS | jq -r '.temporada')
           ROUND=$(printf %02d $(echo $STATUS | jq -r '.rodada_atual'))
-          echo PATH=${{ matrix.url }}/$SEASON-$ROUND.json >> $GITHUB_OUTPUT
+          PATH=${{ matrix.endpoint }}/$SEASON-$ROUND.json
+          echo PATH=$PATH
+          echo PATH=$PATH >> $GITHUB_OUTPUT
 
       - run: echo ${{ steps.status.outputs.PATH }}
