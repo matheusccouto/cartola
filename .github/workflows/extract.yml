@@ -39,5 +39,5 @@ jobs:
           SEASON=$(echo $STATUS | jq -r '.temporada')
           ROUND=$(printf %02d $(echo $STATUS | jq -r '.rodada_atual'))
           FILE=${{ matrix.endpoint }}/$SEASON-$ROUND.json
-          curl -s https://api.cartola.globo.com/${{ matrix.endpoint }} | jq -S '.' > data.json
+          curl -s https://api.cartola.globo.com/${{ matrix.endpoint }} > data.json
           gcloud storage cp data.json gs://cartola/$FILE
