@@ -16,7 +16,7 @@ jobs:
       matrix:
         endpoint:
           - atletas/mercado
-          - mercado/status
+          - mercado/destaques
     steps:
       - name: Authenticate Google Cloud
         uses: google-github-actions/auth@v1
