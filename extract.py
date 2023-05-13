@@ -19,4 +19,4 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("endpoint")
     args = parser.parse_args()
-    print(extract(args.url))
+    print(extract(args.endpoint))
