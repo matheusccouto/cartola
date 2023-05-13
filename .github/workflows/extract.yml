@@ -8,8 +8,8 @@ on:
     - cron: 0 * * * *
 
 permissions:
-  contents: "read"
-  id-token: "write"
+  contents: read
+  id-token: write
 
 jobs:
   extract:
@@ -31,16 +31,18 @@ jobs:
       - name: Setup Google Cloud
         uses: google-github-actions/setup-gcloud@v1
 
-      - name: Extract and load to Google Cloud Storage
+      - name: Extract from API and load to Google Cloud Storage
         run: |
           # Compose target path
           STATUS=$(curl -s https://api.cartola.globo.com/mercado/status)
           SEASON=$(echo $STATUS | jq -r '.temporada')
           ROUND=$(printf %02d $(echo $STATUS | jq -r '.rodada_atual'))
           TARGET_PATH=$(${{ matrix.dir }}/$SEASON-$ROUND.json)
+          echo TARGET_PATH=$TARGET_PATH
 
           # Download data
           curl -s https://api.cartola.globo.com/${{ matrix.endpoint }} | jq ${{ matrix.filter }} > data.json
+          echo Download to data.json
 
           # Upload data
           gcloud storage cp data.json gs://cartola/$TARGET_PATH
