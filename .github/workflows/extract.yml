@@ -41,8 +41,8 @@ jobs:
           # Download and filter data
           curl -s https://api.cartola.globo.com/${{ matrix.endpoint }} | \
             jq -c ${{ matrix.filter }} | \
-            jq 'map(. + {"_temporada": $SEASON, "_rodada": $ROUND})[]' \
-            > data.json
+            jq 'map(. + {"_temporada": "$SEASON", "_rodada": "$ROUND"})[]' > \
+            data.json
 
           # Upload data
           echo gs://cartola/$TARGET_PATH
