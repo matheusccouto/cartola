@@ -37,5 +37,5 @@ jobs:
         run: |
           SEASON=$(curl -s https://api.cartola.globo.com/mercado/status | jq -r '.temporada')
           ROUND=$(curl -s https://api.cartola.globo.com/mercado/status | jq -r '.rodada_atual' | printf %02d)
-          curl -s https://api.cartola.globo.com/${{ matrix.endpoint }} | jq -c .[] > data.json
+          curl -s https://api.cartola.globo.com/${{ matrix.endpoint }} | jq -cS .[] > data.json
           gcloud storage cp data.json gs://cartola/${{ matrix.endpoint }}/$SEASON-$ROUND.json
