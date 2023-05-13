@@ -15,10 +15,12 @@ jobs:
   extract:
     runs-on: ubuntu-latest
     strategy:
-      include:
-        - path: atletas/mercado/atletas
-          endpoint: atletas/mercado
-          filter: .atletas[]
+      matrix:
+        include:
+          - endpoint: atletas/mercado
+            filter: .atletas[]
+            dir: atletas/mercado/atletas
+
     steps:
       - name: Authenticate Google Cloud
         uses: google-github-actions/auth@v1
@@ -35,7 +37,7 @@ jobs:
           STATUS=$(curl -s https://api.cartola.globo.com/mercado/status)
           SEASON=$(echo $STATUS | jq -r '.temporada')
           ROUND=$(printf %02d $(echo $STATUS | jq -r '.rodada_atual'))
-          TARGET_PATH=$(${{ matrix.path }}/$SEASON-$ROUND.json)
+          TARGET_PATH=$(${{ matrix.dir }}/$SEASON-$ROUND.json)
 
           # Download data
           curl -s https://api.cartola.globo.com/${{ matrix.endpoint }} | jq ${{ matrix.filter }} > data.json
