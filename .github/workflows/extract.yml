@@ -18,7 +18,7 @@ jobs:
       matrix:
         include:
           - endpoint: atletas/mercado
-            filter: .atletas
+            filter: .atletas[]
             dir: atletas/mercado/atletas
 
     steps:
@@ -39,7 +39,7 @@ jobs:
           ROUND=$(printf %02d $(echo $STATUS | jq -r '.rodada_atual'))
 
           # Download and filter data
-          curl -s https://api.cartola.globo.com/${{ matrix.endpoint }} | jq ${{ matrix.filter }} > data.json
+          curl -s https://api.cartola.globo.com/${{ matrix.endpoint }} | jq -c ${{ matrix.filter }} > data.json
 
           # Upload data
           echo gs://cartola/$TARGET_PATH
