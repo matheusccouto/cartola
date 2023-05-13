@@ -1,4 +1,4 @@
-name: Authenticate Google Cloud with OpenID Connect
+name: Extract from Cartola API
 
 on:
   push:
@@ -12,7 +12,7 @@ permissions:
   id-token: "write"
 
 jobs:
-  auth:
+  extract:
     runs-on: ubuntu-latest
     strategy:
       matrix:
