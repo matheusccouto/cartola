@@ -21,6 +21,7 @@ jobs:
           - mercado/destaques
           - mercado/selecao
           - partidas
+      fail-fast: false
     steps:
       - name: Authenticate Google Cloud
         uses: google-github-actions/auth@v1
@@ -31,7 +32,7 @@ jobs:
       - name: Setup Google Cloud
         uses: google-github-actions/setup-gcloud@v1
 
-      - name: Upload to Google Cloud Storage
+      - name: Load to Google Cloud Storage
         run: |
           STATUS=$(curl -s https://api.cartola.globo.com/mercado/status)
           SEASON=$(echo $STATUS | jq -r '.temporada')
