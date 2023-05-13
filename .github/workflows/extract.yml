@@ -18,7 +18,7 @@ jobs:
       matrix:
         include:
           - endpoint: atletas/mercado
-            filter: .atletas[]
+            filter: .atletas
             dir: atletas/mercado/atletas
 
     steps:
