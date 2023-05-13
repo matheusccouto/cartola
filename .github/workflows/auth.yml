@@ -38,6 +38,5 @@ jobs:
 
       - name: Upload to Google Cloud Storage
         run: |
-          mkdir -p $(dirname ${{ steps.path.outputs.path }})
-          curl -s https://api.cartola.globo.com/${{ matrix.endpoint }} -o ${{ steps.path.outputs.path }}
-          gcloud storage cp ${{ steps.path.outputs.path }} gs://cartola/${{ steps.path.outputs.path }}
+          curl -s https://api.cartola.globo.com/${{ matrix.endpoint }} -o output
+          gcloud storage cp file gs://cartola/${{ steps.path.outputs.path }}
