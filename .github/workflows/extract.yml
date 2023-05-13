@@ -35,9 +35,7 @@ jobs:
 
       - name: Extract and load to Google Cloud Storage
         run: |
-          STATUS=$(curl -s https://api.cartola.globo.com/mercado/status)
-          SEASON=$(echo $STATUS | jq -r '.temporada')
-          ROUND=$(printf %02d $(echo $STATUS | jq -r '.rodada_atual'))
-          FILE=${{ matrix.endpoint }}/$SEASON-$ROUND.json
-          curl -s https://api.cartola.globo.com/${{ matrix.endpoint }} > data.json
-          gcloud storage cp data.json gs://cartola/$FILE
+          SEASON=$(curl -s https://api.cartola.globo.com/mercado/status | jq -r '.temporada')
+          ROUND=$(curl -s https://api.cartola.globo.com/mercado/status | jq -r '.rodada_atual' | printf %02d)
+          curl -s https://api.cartola.globo.com/${{ matrix.endpoint }} | jq -c . > data.json
+          gcloud storage cp data.json gs://cartola/${{ matrix.endpoint }}/$SEASON-$ROUND.json

@@ -1,0 +1,342 @@
+[
+  {
+    "posicao": "Atacante",
+    "posicao_abreviacao": "ATA",
+    "clube": "FLU",
+    "clube_nome": "Fluminense",
+    "escudo_clube": "https://s.sde.globo.com/media/organizations/2014/04/14/fluminense_60x60.png",
+    "Atleta": {
+      "nome": "Germán Ezequiel Cano",
+      "apelido": "Cano",
+      "apelido_abreviado": "Cano",
+      "foto": "https://s.sde.globo.com/media/person_role/2023/05/09/photo_FORMATO_CKcA05y.png",
+      "atleta_id": 79631,
+      "preco_editorial": 22
+    },
+    "clube_id": 266,
+    "escalacoes": 1418880
+  },
+  {
+    "posicao": "Zagueiro",
+    "posicao_abreviacao": "ZAG",
+    "clube": "PAL",
+    "clube_nome": "Palmeiras",
+    "escudo_clube": "https://s.sde.globo.com/media/organizations/2014/04/14/palmeiras_60x60.png",
+    "Atleta": {
+      "nome": "Gustavo Raúl Gómez Portillo",
+      "apelido": "Gustavo Gómez",
+      "apelido_abreviado": "G. Gómez",
+      "foto": "https://s.sde.globo.com/media/person_role/2023/03/15/photo_FORMATO_WsvPa3o.png",
+      "atleta_id": 71684,
+      "preco_editorial": 18
+    },
+    "clube_id": 275,
+    "escalacoes": 1118369
+  },
+  {
+    "posicao": "Meia",
+    "posicao_abreviacao": "MEI",
+    "clube": "FLU",
+    "clube_nome": "Fluminense",
+    "escudo_clube": "https://s.sde.globo.com/media/organizations/2014/04/14/fluminense_60x60.png",
+    "Atleta": {
+      "nome": "Jhon Adolfo Arias Andrade",
+      "apelido": "Arias",
+      "apelido_abreviado": "Arias",
+      "foto": "https://s.sde.globo.com/media/person_role/2023/05/09/photo_FORMATO_8Xam8ML.png",
+      "atleta_id": 99815,
+      "preco_editorial": 14
+    },
+    "clube_id": 266,
+    "escalacoes": 1058973
+  },
+  {
+    "posicao": "Atacante",
+    "posicao_abreviacao": "ATA",
+    "clube": "CAP",
+    "clube_nome": "Athlético-PR",
+    "escudo_clube": "https://s.sde.globo.com/media/organizations/2019/09/09/Athletico-PR-65x65.png",
+    "Atleta": {
+      "nome": "Vitor Hugo Roque Ferreira",
+      "apelido": "Vitor Roque",
+      "apelido_abreviado": "V. Roque",
+      "foto": "https://s.sde.globo.com/media/person_role/2023/02/28/photo_FORMATO_0B2D0LR.png",
+      "atleta_id": 114802,
+      "preco_editorial": 9
+    },
+    "clube_id": 293,
+    "escalacoes": 837202
+  },
+  {
+    "posicao": "Técnico",
+    "posicao_abreviacao": "TEC",
+    "clube": "COR",
+    "clube_nome": "Corinthians",
+    "escudo_clube": "https://s.sde.globo.com/media/organizations/2019/09/30/Corinthians_65.png",
+    "Atleta": {
+      "nome": "Vanderlei Luxemburgo da Silva",
+      "apelido": "Vanderlei Luxemburgo",
+      "apelido_abreviado": "V. Luxemburgo",
+      "foto": "https://s.sde.globo.com/media/person_role/2023/05/02/photo_FORMATO_53uYX2K.png",
+      "atleta_id": 41327,
+      "preco_editorial": 6.02
+    },
+    "clube_id": 264,
+    "escalacoes": 832527
+  },
+  {
+    "posicao": "Meia",
+    "posicao_abreviacao": "MEI",
+    "clube": "FLA",
+    "clube_nome": "Flamengo",
+    "escudo_clube": "https://s.sde.globo.com/media/organizations/2018/04/09/Flamengo-65.png",
+    "Atleta": {
+      "nome": "Giorgian Daniel de Arrascaeta Benedetti",
+      "apelido": "Arrascaeta",
+      "apelido_abreviado": "Arrascaeta",
+      "foto": "https://s.sde.globo.com/media/person_role/2023/04/11/photo_FORMATO_CaSgg7s.png",
+      "atleta_id": 87863,
+      "preco_editorial": 19
+    },
+    "clube_id": 262,
+    "escalacoes": 617301
+  },
+  {
+    "posicao": "Goleiro",
+    "posicao_abreviacao": "GOL",
+    "clube": "PAL",
+    "clube_nome": "Palmeiras",
+    "escudo_clube": "https://s.sde.globo.com/media/organizations/2014/04/14/palmeiras_60x60.png",
+    "Atleta": {
+      "nome": "Weverton Pereira da Silva",
+      "apelido": "Weverton",
+      "apelido_abreviado": "Weverton",
+      "foto": "https://s.sde.globo.com/media/person_role/2023/03/15/photo_FORMATO_PN9nfV7.png",
+      "atleta_id": 71631,
+      "preco_editorial": 19
+    },
+    "clube_id": 275,
+    "escalacoes": 596843
+  },
+  {
+    "posicao": "Lateral",
+    "posicao_abreviacao": "LAT",
+    "clube": "PAL",
+    "clube_nome": "Palmeiras",
+    "escudo_clube": "https://s.sde.globo.com/media/organizations/2014/04/14/palmeiras_60x60.png",
+    "Atleta": {
+      "nome": "Vanderlan Barbosa da Silva",
+      "apelido": "Vanderlan",
+      "apelido_abreviado": "Vanderlan",
+      "foto": "https://s.sde.globo.com/media/person_role/2023/03/15/photo_FORMATO_F0bHOxR.png",
+      "atleta_id": 107236,
+      "preco_editorial": 5
+    },
+    "clube_id": 275,
+    "escalacoes": 537396
+  },
+  {
+    "posicao": "Meia",
+    "posicao_abreviacao": "MEI",
+    "clube": "PAL",
+    "clube_nome": "Palmeiras",
+    "escudo_clube": "https://s.sde.globo.com/media/organizations/2014/04/14/palmeiras_60x60.png",
+    "Atleta": {
+      "nome": "Gabriel Vinícius Menino",
+      "apelido": "Gabriel Menino",
+      "apelido_abreviado": "G. Menino",
+      "foto": "https://s.sde.globo.com/media/person_role/2023/03/15/photo_FORMATO_a770SrF.png",
+      "atleta_id": 103767,
+      "preco_editorial": 8
+    },
+    "clube_id": 275,
+    "escalacoes": 524473
+  },
+  {
+    "posicao": "Atacante",
+    "posicao_abreviacao": "ATA",
+    "clube": "PAL",
+    "clube_nome": "Palmeiras",
+    "escudo_clube": "https://s.sde.globo.com/media/organizations/2014/04/14/palmeiras_60x60.png",
+    "Atleta": {
+      "nome": "Artur Victor Guimarães",
+      "apelido": "Artur",
+      "apelido_abreviado": "Artur",
+      "foto": "https://s.sde.globo.com/media/person_role/2023/03/31/photo_FORMATO_G1nE6cb.png",
+      "atleta_id": 95799,
+      "preco_editorial": 7
+    },
+    "clube_id": 275,
+    "escalacoes": 489231
+  },
+  {
+    "posicao": "Lateral",
+    "posicao_abreviacao": "LAT",
+    "clube": "PAL",
+    "clube_nome": "Palmeiras",
+    "escudo_clube": "https://s.sde.globo.com/media/organizations/2014/04/14/palmeiras_60x60.png",
+    "Atleta": {
+      "nome": "Mayke Rocha de Oliveira",
+      "apelido": "Mayke",
+      "apelido_abreviado": "Mayke",
+      "foto": "https://s.sde.globo.com/media/person_role/2023/03/15/photo_FORMATO_VrbLrFd.png",
+      "atleta_id": 81150,
+      "preco_editorial": 7
+    },
+    "clube_id": 275,
+    "escalacoes": 489067
+  },
+  {
+    "posicao": "Meia",
+    "posicao_abreviacao": "MEI",
+    "clube": "PAL",
+    "clube_nome": "Palmeiras",
+    "escudo_clube": "https://s.sde.globo.com/media/organizations/2014/04/14/palmeiras_60x60.png",
+    "Atleta": {
+      "nome": "Raphael Cavalcante Veiga",
+      "apelido": "Raphael Veiga",
+      "apelido_abreviado": "R. Veiga",
+      "foto": "https://s.sde.globo.com/media/person_role/2023/03/15/photo_FORMATO_l1kSIXt.png",
+      "atleta_id": 94509,
+      "preco_editorial": 21
+    },
+    "clube_id": 275,
+    "escalacoes": 477954
+  },
+  {
+    "posicao": "Zagueiro",
+    "posicao_abreviacao": "ZAG",
+    "clube": "FLU",
+    "clube_nome": "Fluminense",
+    "escudo_clube": "https://s.sde.globo.com/media/organizations/2014/04/14/fluminense_60x60.png",
+    "Atleta": {
+      "nome": "Marcílio Florêncio Mota Filho",
+      "apelido": "Nino",
+      "apelido_abreviado": "Nino",
+      "foto": "https://s.sde.globo.com/media/person_role/2023/05/09/photo_FORMATO_U5c1E7V.png",
+      "atleta_id": 91708,
+      "preco_editorial": 11
+    },
+    "clube_id": 266,
+    "escalacoes": 473593
+  },
+  {
+    "posicao": "Meia",
+    "posicao_abreviacao": "MEI",
+    "clube": "FLU",
+    "clube_nome": "Fluminense",
+    "escudo_clube": "https://s.sde.globo.com/media/organizations/2014/04/14/fluminense_60x60.png",
+    "Atleta": {
+      "nome": "Vinicius Moreira de Lima",
+      "apelido": "Lima",
+      "apelido_abreviado": "Lima",
+      "foto": "https://s.sde.globo.com/media/person_role/2023/05/09/photo_FORMATO_bCG6s7k.png",
+      "atleta_id": 96340,
+      "preco_editorial": 7
+    },
+    "clube_id": 266,
+    "escalacoes": 450386
+  },
+  {
+    "posicao": "Goleiro",
+    "posicao_abreviacao": "GOL",
+    "clube": "CAM",
+    "clube_nome": "Atlético-MG",
+    "escudo_clube": "https://s.sde.globo.com/media/organizations/2017/11/23/Atletico-Mineiro-escudo65px.png",
+    "Atleta": {
+      "nome": "Everson Felipe Marques Pires",
+      "apelido": "Everson",
+      "apelido_abreviado": "Everson",
+      "foto": "https://s.sde.globo.com/media/person_role/2023/03/01/photo_FORMATO_XhJDp6n.png",
+      "atleta_id": 72294,
+      "preco_editorial": 5
+    },
+    "clube_id": 282,
+    "escalacoes": 393979
+  },
+  {
+    "posicao": "Zagueiro",
+    "posicao_abreviacao": "ZAG",
+    "clube": "PAL",
+    "clube_nome": "Palmeiras",
+    "escudo_clube": "https://s.sde.globo.com/media/organizations/2014/04/14/palmeiras_60x60.png",
+    "Atleta": {
+      "nome": "Luan Garcia Teixeira",
+      "apelido": "Luan",
+      "apelido_abreviado": "Luan",
+      "foto": "https://s.sde.globo.com/media/person_role/2023/03/15/photo_FORMATO_cnIvHfj.png",
+      "atleta_id": 80692,
+      "preco_editorial": 7
+    },
+    "clube_id": 275,
+    "escalacoes": 386618
+  },
+  {
+    "posicao": "Meia",
+    "posicao_abreviacao": "MEI",
+    "clube": "CAP",
+    "clube_nome": "Athlético-PR",
+    "escudo_clube": "https://s.sde.globo.com/media/organizations/2019/09/09/Athletico-PR-65x65.png",
+    "Atleta": {
+      "nome": "Miguel David Terans Pérez",
+      "apelido": "Terans",
+      "apelido_abreviado": "Terans",
+      "foto": "https://s.sde.globo.com/media/person_role/2023/02/28/photo_FORMATO_rzjzN6M.png",
+      "atleta_id": 102878,
+      "preco_editorial": 18
+    },
+    "clube_id": 293,
+    "escalacoes": 370189
+  },
+  {
+    "posicao": "Meia",
+    "posicao_abreviacao": "MEI",
+    "clube": "FLU",
+    "clube_nome": "Fluminense",
+    "escudo_clube": "https://s.sde.globo.com/media/organizations/2014/04/14/fluminense_60x60.png",
+    "Atleta": {
+      "nome": "Paulo Henrique Chagas de Lima",
+      "apelido": "Ganso",
+      "apelido_abreviado": "Ganso",
+      "foto": "https://s.sde.globo.com/media/person_role/2023/05/09/photo_FORMATO_PmRYkjX.png",
+      "atleta_id": 62977,
+      "preco_editorial": 10
+    },
+    "clube_id": 266,
+    "escalacoes": 352169
+  },
+  {
+    "posicao": "Atacante",
+    "posicao_abreviacao": "ATA",
+    "clube": "PAL",
+    "clube_nome": "Palmeiras",
+    "escudo_clube": "https://s.sde.globo.com/media/organizations/2014/04/14/palmeiras_60x60.png",
+    "Atleta": {
+      "nome": "Ronielson da Silva Barbosa",
+      "apelido": "Rony",
+      "apelido_abreviado": "Rony",
+      "foto": "https://s.sde.globo.com/media/person_role/2023/03/15/photo_FORMATO_eJOedW8.png",
+      "atleta_id": 91607,
+      "preco_editorial": 15
+    },
+    "clube_id": 275,
+    "escalacoes": 346868
+  },
+  {
+    "posicao": "Atacante",
+    "posicao_abreviacao": "ATA",
+    "clube": "CAM",
+    "clube_nome": "Atlético-MG",
+    "escudo_clube": "https://s.sde.globo.com/media/organizations/2017/11/23/Atletico-Mineiro-escudo65px.png",
+    "Atleta": {
+      "nome": "Givanildo Vieira de Souza",
+      "apelido": "Hulk",
+      "apelido_abreviado": "Hulk",
+      "foto": "https://s.sde.globo.com/media/person_role/2023/03/31/photo_FORMATO_VrWmS3u.png",
+      "atleta_id": 39148,
+      "preco_editorial": 16
+    },
+    "clube_id": 282,
+    "escalacoes": 344291
+  }
+]
