@@ -16,7 +16,7 @@ jobs:
       matrix:
         endpoint:
           - atletas/mercado
-          - atletas/pontuados
+          - atletas/pontuados/$ROUND
           - clubes
           - mercado/destaques
           - mercado/selecao
@@ -31,17 +31,11 @@ jobs:
       - name: Setup Google Cloud
         uses: google-github-actions/setup-gcloud@v1
 
-      - name: Compose file path
-        id: path
+      - name: Upload to Google Cloud Storage
         run: |
           STATUS=$(curl -s https://api.cartola.globo.com/mercado/status)
           SEASON=$(echo $STATUS | jq -r '.temporada')
           ROUND=$(printf %02d $(echo $STATUS | jq -r '.rodada_atual'))
           PATH=${{ matrix.endpoint }}/$SEASON-$ROUND.json
-          echo PATH=$PATH
-          echo PATH=$PATH >> $GITHUB_OUTPUT
-
-      - name: Upload to Google Cloud Storage
-        run: |
           curl -s https://api.cartola.globo.com/${{ matrix.endpoint }} -o data.json
-          gcloud storage cp data.json gs://cartola/${{ steps.path.outputs.path }}
+          gcloud storage cp data.json gs://cartola/$PATH
