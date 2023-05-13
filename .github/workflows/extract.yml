@@ -33,11 +33,19 @@ jobs:
       - name: Setup Google Cloud
         uses: google-github-actions/setup-gcloud@v1
 
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install requirements
+        run: pip install -r requirements.txt --disable-pip-version-check
+
       - name: Extract and load to Google Cloud Storage
         run: |
           STATUS=$(curl -s https://api.cartola.globo.com/mercado/status)
           SEASON=$(echo $STATUS | jq -r '.temporada')
           ROUND=$(printf %02d $(echo $STATUS | jq -r '.rodada_atual'))
           FILE=${{ matrix.endpoint }}/$SEASON-$ROUND.json
-          curl -s https://api.cartola.globo.com/${{ matrix.endpoint }} | jq '.' > data.json
+          python extract.py ${{ matrix.endpoint }} > data.json
           gcloud storage cp data.json gs://cartola/$FILE
