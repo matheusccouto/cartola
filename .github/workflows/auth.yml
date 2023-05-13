@@ -16,6 +16,7 @@ jobs:
       matrix:
         endpoint:
           - atletas/mercado
+          - mercado/status
     steps:
       - name: Authenticate Google Cloud
         uses: google-github-actions/auth@v1
@@ -38,5 +39,5 @@ jobs:
 
       - name: Upload to Google Cloud Storage
         run: |
-          curl -s https://api.cartola.globo.com/${{ matrix.endpoint }} -o output
-          gcloud storage cp file gs://cartola/${{ steps.path.outputs.path }}
+          curl -s https://api.cartola.globo.com/${{ matrix.endpoint }} -o data.json
+          gcloud storage cp data.json gs://cartola/${{ steps.path.outputs.path }}
