@@ -38,6 +38,6 @@ jobs:
           STATUS=$(curl -s https://api.cartola.globo.com/mercado/status)
           SEASON=$(echo $STATUS | jq -r '.temporada')
           ROUND=$(printf %02d $(echo $STATUS | jq -r '.rodada_atual'))
-          PATH=${{ matrix.endpoint }}/$SEASON-$ROUND.json
+          FILE=${{ matrix.endpoint }}/$SEASON-$ROUND.json
           curl -s https://api.cartola.globo.com/${{ matrix.endpoint }} -o data.json
-          gcloud storage cp data.json gs://cartola/$PATH
+          gcloud storage cp data.json gs://cartola/$FILE
