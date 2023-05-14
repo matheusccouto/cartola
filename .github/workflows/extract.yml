@@ -19,7 +19,30 @@ jobs:
         include:
           - endpoint: atletas/mercado
             filter: .atletas
-            dir: atletas/mercado/atletas
+
+          - endpoint: atletas/pontuados
+            filter: .atletas
+
+          - endpoint: mercado/status
+            filter: .
+
+          - endpoint: mercado/destaques
+            filter: .
+
+          - endpoint: partidas
+            filter: .partidas
+
+          - endpoint: clubes
+            filter: .
+
+          - endpoint: status
+            filter: .
+
+          - endpoint: posicoes
+            filter: .
+
+          - endpoint: esquemas
+            filter: .
 
     steps:
       - name: Authenticate Google Cloud
@@ -46,4 +69,4 @@ jobs:
 
           # Upload data
           echo gs://cartola/$TARGET_PATH
-          gcloud storage cp data.json gs://cartola/${{ matrix.dir }}/$SEASON-$(printf %02d $ROUND).json
+          gcloud storage cp data.json gs://cartola/${{ matrix.endpoint }}/$SEASON-$(printf %02d $ROUND).json
