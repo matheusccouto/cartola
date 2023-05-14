@@ -24,9 +24,6 @@ jobs:
           - endpoint: atletas/pontuados
             filter: .atletas
 
-          - endpoint: mercado/status
-            filter: .
-
           - endpoint: mercado/destaques
             filter: .
 
