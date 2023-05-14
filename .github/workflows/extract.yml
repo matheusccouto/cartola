@@ -15,6 +15,7 @@ jobs:
   extract:
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         include:
           - endpoint: atletas/mercado
@@ -33,9 +34,6 @@ jobs:
             filter: .partidas
 
           - endpoint: clubes
-            filter: .
-
-          - endpoint: status
             filter: .
 
           - endpoint: posicoes
