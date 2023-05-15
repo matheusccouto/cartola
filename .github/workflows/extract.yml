@@ -14,7 +14,7 @@ on:
         type: string
       replace:
         required: true
-        type: string
+        type: boolean
 
 permissions:
   contents: read
@@ -39,7 +39,7 @@ jobs:
           STATUS=$(curl -s https://api.cartola.globo.com/mercado/status)
           SEASON=$(echo $STATUS | jq -r '.temporada')
           ROUND=$(echo $STATUS | jq -r '.rodada_atual')
-          BASENAME=$($SEASON-$(printf %02d $ROUND))
+          BASENAME=$(echo $SEASON-$(printf %02d $ROUND))
 
           # Download and filter data
           curl -s https://api.cartola.globo.com/${{ inputs.endpoint }} | \
