@@ -1,4 +1,4 @@
-name: Cartola API ETL
+name: ETL
 
 on:
   workflow_call:
@@ -18,7 +18,7 @@ permissions:
   id-token: write
 
 jobs:
-  extract:
+  etl:
     runs-on: ubuntu-latest
     steps:
       - name: Authenticate Google Cloud

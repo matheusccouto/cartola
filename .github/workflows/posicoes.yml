@@ -1,0 +1,20 @@
+name: Posições
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: 0 * * * *
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  posicoes:
+    uses: ./.github/workflows/etl.yml
+    with:
+      endpoint: posicoes
+      filter: .
+      table: posicoes

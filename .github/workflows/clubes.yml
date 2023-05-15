@@ -1,0 +1,20 @@
+name: Clubes
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: 0 * * * *
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  clubes:
+    uses: ./.github/workflows/etl.yml
+    with:
+      endpoint: clubes
+      filter: .
+      table: clubes

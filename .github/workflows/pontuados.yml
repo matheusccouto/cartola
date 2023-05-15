@@ -1,4 +1,4 @@
-name: Atletas
+name: Pontuados
 
 on:
   push:
@@ -12,9 +12,9 @@ permissions:
   id-token: write
 
 jobs:
-  atletas:
-    uses: ./.github/workflows/extract.yml
+  pontuados:
+    uses: ./.github/workflows/etl.yml
     with:
-      endpoint: atletas/mercado
+      endpoint: atletas/pontuados
       filter: .atletas
-      table: atletas
+      table: pontuados
