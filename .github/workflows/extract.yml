@@ -70,7 +70,7 @@ jobs:
       - name: Load to Google BigQuery from Google Cloud Storage
         run: |
           # Replace slash with underscore
-          TABLE_NAME=$(echo $ENDPOINT | tr '/' '_')
+          TABLE_NAME=$(echo ${{ matrix.endpoint }} | tr '/' '_')
           bq load \
             --autodetect \
             --source_format=NEWLINE_DELIMITED_JSON \
