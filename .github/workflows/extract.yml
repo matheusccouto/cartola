@@ -74,5 +74,6 @@ jobs:
           bq load \
             --autodetect \
             --source_format=NEWLINE_DELIMITED_JSON \
+            --replace \
             cartola.$TABLE_NAME \
             gs://cartola/${{ matrix.endpoint }}/*.json
