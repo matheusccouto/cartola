@@ -50,6 +50,7 @@ jobs:
           gcloud storage cp data.json gs://cartola/${{ inputs.endpoint }}/${{ inputs.table }}/$BASENAME.json
 
       - name: Load to Google BigQuery from Google Cloud Storage
+        if: test -s data.json
         run: |
           bq load \
             --autodetect \
