@@ -13,7 +13,7 @@ permissions:
 
 jobs:
   atletas:
-    uses: ./github/workflows/extract.yml
+    uses: ./.github/workflows/extract.yml
     with:
       endpoint: atletas/mercado
       filter: .atletas
