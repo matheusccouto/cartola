@@ -7,9 +7,9 @@ on:
   schedule:
     - cron: 0 * * * *
 
-permissions:
-  contents: read
-  id-token: write
+# permissions:
+#   contents: read
+#   id-token: write
 
 jobs:
   atletas:
