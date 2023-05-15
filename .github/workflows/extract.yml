@@ -66,3 +66,13 @@ jobs:
           # Upload data
           echo gs://cartola/$TARGET_PATH
           gcloud storage cp data.json gs://cartola/${{ matrix.endpoint }}/$SEASON-$(printf %02d $ROUND).json
+
+      - name: Load to Google BigQuery from Google Cloud Storage
+        run: |
+          # Replace slash with underscore
+          TABLE_NAME=$(echo $ENDPOINT | tr '/' '_')
+          bq load \
+            --autodetect \
+            --source_format=NEWLINE_DELIMITED_JSON \
+            cartola.$TABLE_NAME \
+            gs://cartola/${{ matrix.endpoint }}/*.json
