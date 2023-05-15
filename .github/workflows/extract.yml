@@ -12,9 +12,6 @@ on:
       table:
         required: true
         type: string
-      replace:
-        required: true
-        type: boolean
 
 permissions:
   contents: read
@@ -57,6 +54,6 @@ jobs:
           bq load \
             --autodetect \
             --source_format=NEWLINE_DELIMITED_JSON \
-            --replace=${{ inputs.replace }} \
+            --replace \
             cartola.${{ inputs.table }} \
-            gs://cartola/${{ inputs.endpoint }}/*.json
+            gs://cartola/${{ inputs.endpoint }}/${{ inputs.table }}/*.json
