@@ -9,6 +9,12 @@ on:
       filter:
         required: true
         type: string
+      table:
+        required: true
+        type: string
+      replace:
+        required: true
+        type: string
 
 permissions:
   contents: read
@@ -33,6 +39,7 @@ jobs:
           STATUS=$(curl -s https://api.cartola.globo.com/mercado/status)
           SEASON=$(echo $STATUS | jq -r '.temporada')
           ROUND=$(echo $STATUS | jq -r '.rodada_atual')
+          BASENAME=$($SEASON-$(printf %02d $ROUND))
 
           # Download and filter data
           curl -s https://api.cartola.globo.com/${{ inputs.endpoint }} | \
@@ -43,17 +50,13 @@ jobs:
 
           # Upload data
           echo gs://cartola/$TARGET_PATH
-          gcloud storage cp data.json gs://cartola/${{ inputs.endpoint }}/$SEASON-$(printf %02d $ROUND).json
+          gcloud storage cp data.json gs://cartola/${{ inputs.endpoint }}/${{ inputs.table }}/$BASENAME.json
 
       - name: Load to Google BigQuery from Google Cloud Storage
         run: |
-          # Replace slash with underscore
-          TABLE_NAME=$(echo ${{ inputs.endpoint }} | tr '/' '_')
-
-          # Load to BigQuery
           bq load \
             --autodetect \
             --source_format=NEWLINE_DELIMITED_JSON \
-            --replace \
-            cartola.$TABLE_NAME \
+            --replace=${{ inputs.replace }} \
+            cartola.${{ inputs.table }} \
             gs://cartola/${{ inputs.endpoint }}/*.json

@@ -17,3 +17,5 @@ jobs:
     with:
       endpoint: atletas/mercado
       filter: .atletas
+      table: atletas
+      replace: true
