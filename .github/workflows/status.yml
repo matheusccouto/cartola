@@ -1,4 +1,4 @@
-name: Atletas
+name: Status
 
 on:
   push:
@@ -16,5 +16,5 @@ jobs:
     uses: ./.github/workflows/etl.yml
     with:
       endpoint: atletas/mercado
-      filter: .atletas
-      table: atletas
+      filter: .status
+      table: status

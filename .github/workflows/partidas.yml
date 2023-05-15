@@ -16,5 +16,5 @@ jobs:
     uses: ./.github/workflows/etl.yml
     with:
       endpoint: partidas
-      filter: .
+      filter: .partidas
       table: partidas
