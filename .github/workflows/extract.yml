@@ -1,11 +1,14 @@
-name: Extract from Cartola API
+name: Cartola API ETL
 
 on:
-  push:
-    branches:
-      - main
-  schedule:
-    - cron: 0 * * * *
+  workflow_call:
+    inputs:
+      endpoint:
+        required: true
+        type: string
+      filter:
+        required: true
+        type: string
 
 permissions:
   contents: read
@@ -14,31 +17,6 @@ permissions:
 jobs:
   extract:
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        include:
-          - endpoint: atletas/mercado
-            filter: .atletas
-
-          - endpoint: atletas/pontuados
-            filter: .atletas
-
-          - endpoint: mercado/destaques
-            filter: .
-
-          - endpoint: partidas
-            filter: .partidas
-
-          - endpoint: clubes
-            filter: .
-
-          - endpoint: posicoes
-            filter: .
-
-          - endpoint: esquemas
-            filter: .
-
     steps:
       - name: Authenticate Google Cloud
         uses: google-github-actions/auth@v1
@@ -57,20 +35,20 @@ jobs:
           ROUND=$(echo $STATUS | jq -r '.rodada_atual')
 
           # Download and filter data
-          curl -s https://api.cartola.globo.com/${{ matrix.endpoint }} | \
-            jq ${{ matrix.filter }} | \
+          curl -s https://api.cartola.globo.com/${{ inputs.endpoint }} | \
+            jq ${{ inputs.filter }} | \
             jq --arg S $SEASON --arg R $ROUND 'map(. + {"_temporada": $S, "_rodada": $R})' | \
             jq -c '.[]' > \
             data.json
 
           # Upload data
           echo gs://cartola/$TARGET_PATH
-          gcloud storage cp data.json gs://cartola/${{ matrix.endpoint }}/$SEASON-$(printf %02d $ROUND).json
+          gcloud storage cp data.json gs://cartola/${{ inputs.endpoint }}/$SEASON-$(printf %02d $ROUND).json
 
       - name: Load to Google BigQuery from Google Cloud Storage
         run: |
           # Replace slash with underscore
-          TABLE_NAME=$(echo ${{ matrix.endpoint }} | tr '/' '_')
+          TABLE_NAME=$(echo ${{ inputs.endpoint }} | tr '/' '_')
 
           # Load to BigQuery
           bq load \
@@ -78,4 +56,4 @@ jobs:
             --source_format=NEWLINE_DELIMITED_JSON \
             --replace \
             cartola.$TABLE_NAME \
-            gs://cartola/${{ matrix.endpoint }}/*.json
+            gs://cartola/${{ inputs.endpoint }}/*.json
