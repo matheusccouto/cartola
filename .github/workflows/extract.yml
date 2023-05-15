@@ -69,8 +69,13 @@ jobs:
 
       - name: Load to Google BigQuery from Google Cloud Storage
         run: |
+          # Initialize BigQuery CLI
+          bq init --quiet
+
           # Replace slash with underscore
           TABLE_NAME=$(echo ${{ matrix.endpoint }} | tr '/' '_')
+
+          # Load to BigQuery
           bq load \
             --autodetect \
             --source_format=NEWLINE_DELIMITED_JSON \
