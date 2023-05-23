@@ -53,6 +53,7 @@ jobs:
         run: |
           bq load \
             --autodetect \
+            --allow_jagged_rows \
             --source_format=NEWLINE_DELIMITED_JSON \
             --replace \
             cartola.${{ inputs.table }} \
