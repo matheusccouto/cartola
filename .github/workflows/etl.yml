@@ -52,7 +52,6 @@ jobs:
       - name: Load to Google BigQuery from Google Cloud Storage
         run: |
           bq load \
-            --autodetect \
             --source_format=NEWLINE_DELIMITED_JSON \
             --replace \
             cartola.${{ inputs.table }} \
