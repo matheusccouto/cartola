@@ -37,6 +37,9 @@ BUCKET_LOCATION="us"
 DATASET_ID="cartola"
 
 
+echo Log in using browser.
+gcloud auth login
+
 echo Create a Google Cloud Service Account.
 gcloud iam service-accounts create "${SERVICE_ACCOUNT}" \
     --project "${PROJECT_ID}"
