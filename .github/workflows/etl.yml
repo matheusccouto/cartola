@@ -24,8 +24,8 @@ jobs:
       - name: Authenticate Google Cloud
         uses: google-github-actions/auth@v1
         with:
-          workload_identity_provider: projects/506924123915/locations/global/workloadIdentityPools/github/providers/github
-          service_account: github@cartola-data.iam.gserviceaccount.com
+          workload_identity_provider: projects/108686647178/locations/global/workloadIdentityPools/github-matheusccouto-cartola
+          service_account: github-matheusccouto-cartola@matheusccouto.iam.gserviceaccount.com
 
       - name: Setup Google Cloud
         uses: google-github-actions/setup-gcloud@v1
