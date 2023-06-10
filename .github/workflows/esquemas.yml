@@ -18,3 +18,4 @@ jobs:
       endpoint: esquemas
       filter: .
       table: esquemas
+      schema: schemas/esquemas.json

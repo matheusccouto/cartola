@@ -18,3 +18,4 @@ jobs:
       endpoint: mercado/destaques
       filter: .
       table: destaques
+      schema: schemas/destaques.json

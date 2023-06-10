@@ -18,3 +18,4 @@ jobs:
       endpoint: atletas/mercado
       filter: .status
       table: status
+      schema: schemas/status.json

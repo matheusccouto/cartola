@@ -18,3 +18,4 @@ jobs:
       endpoint: partidas
       filter: .partidas
       table: partidas
+      schema: schemas/partidas.json

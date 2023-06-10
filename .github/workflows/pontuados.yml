@@ -18,3 +18,4 @@ jobs:
       endpoint: atletas/pontuados
       filter: .atletas
       table: pontuados
+      schema: schemas/pontuados.json

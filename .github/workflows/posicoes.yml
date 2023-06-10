@@ -18,3 +18,4 @@ jobs:
       endpoint: posicoes
       filter: .
       table: posicoes
+      schema: schemas/posicoes.json
