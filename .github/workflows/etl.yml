@@ -12,6 +12,9 @@ on:
       table:
         required: true
         type: string
+      schema:
+        required: true
+        type: string
 
 permissions:
   contents: read
