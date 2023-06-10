@@ -1,0 +1,139 @@
+[
+  {
+    "mode": "NULLABLE",
+    "name": "_rodada",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "_temporada",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "entrou_em_campo",
+    "type": "BOOLEAN"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "posicao_id",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "clube_id",
+    "type": "INTEGER"
+  },
+  {
+    "fields": [
+      {
+        "mode": "NULLABLE",
+        "name": "PS",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "V",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "G",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "DE",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "CV",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "GS",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "FS",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "FT",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "SG",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "I",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "PC",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "CA",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "FD",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "DS",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "FF",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "A",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "FC",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "PP",
+        "type": "INTEGER"
+      }
+    ],
+    "mode": "NULLABLE",
+    "name": "scout",
+    "type": "RECORD"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "foto",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "apelido",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "pontuacao",
+    "type": "FLOAT"
+  }
+]
