@@ -6,387 +6,27 @@
   },
   {
     "mode": "NULLABLE",
-    "name": "foto",
-    "type": "STRING"
+    "name": "valida",
+    "type": "BOOLEAN"
   },
   {
     "mode": "NULLABLE",
-    "name": "apelido_abreviado",
-    "type": "STRING"
-  },
-  {
-    "mode": "NULLABLE",
-    "name": "slug",
-    "type": "STRING"
-  },
-  {
-    "mode": "NULLABLE",
-    "name": "minimo_para_valorizar",
-    "type": "FLOAT"
-  },
-  {
-    "mode": "NULLABLE",
-    "name": "apelido",
-    "type": "STRING"
-  },
-  {
-    "fields": [
-      {
-        "fields": [
-          {
-            "fields": [
-              {
-                "mode": "NULLABLE",
-                "name": "GC",
-                "type": "INTEGER"
-              },
-              {
-                "mode": "NULLABLE",
-                "name": "PS",
-                "type": "INTEGER"
-              },
-              {
-                "mode": "NULLABLE",
-                "name": "A",
-                "type": "INTEGER"
-              },
-              {
-                "mode": "NULLABLE",
-                "name": "G",
-                "type": "INTEGER"
-              },
-              {
-                "mode": "NULLABLE",
-                "name": "DE",
-                "type": "INTEGER"
-              },
-              {
-                "mode": "NULLABLE",
-                "name": "PP",
-                "type": "INTEGER"
-              },
-              {
-                "mode": "NULLABLE",
-                "name": "FC",
-                "type": "INTEGER"
-              },
-              {
-                "mode": "NULLABLE",
-                "name": "FF",
-                "type": "INTEGER"
-              },
-              {
-                "mode": "NULLABLE",
-                "name": "DS",
-                "type": "INTEGER"
-              },
-              {
-                "mode": "NULLABLE",
-                "name": "DP",
-                "type": "INTEGER"
-              },
-              {
-                "mode": "NULLABLE",
-                "name": "CV",
-                "type": "INTEGER"
-              },
-              {
-                "mode": "NULLABLE",
-                "name": "FT",
-                "type": "INTEGER"
-              },
-              {
-                "mode": "NULLABLE",
-                "name": "FS",
-                "type": "INTEGER"
-              },
-              {
-                "mode": "NULLABLE",
-                "name": "GS",
-                "type": "INTEGER"
-              },
-              {
-                "mode": "NULLABLE",
-                "name": "PC",
-                "type": "INTEGER"
-              },
-              {
-                "mode": "NULLABLE",
-                "name": "CA",
-                "type": "INTEGER"
-              },
-              {
-                "mode": "NULLABLE",
-                "name": "I",
-                "type": "INTEGER"
-              },
-              {
-                "mode": "NULLABLE",
-                "name": "FD",
-                "type": "INTEGER"
-              },
-              {
-                "mode": "NULLABLE",
-                "name": "SG",
-                "type": "INTEGER"
-              }
-            ],
-            "mode": "NULLABLE",
-            "name": "visitante",
-            "type": "RECORD"
-          },
-          {
-            "fields": [
-              {
-                "mode": "NULLABLE",
-                "name": "GC",
-                "type": "INTEGER"
-              },
-              {
-                "mode": "NULLABLE",
-                "name": "PS",
-                "type": "INTEGER"
-              },
-              {
-                "mode": "NULLABLE",
-                "name": "A",
-                "type": "INTEGER"
-              },
-              {
-                "mode": "NULLABLE",
-                "name": "G",
-                "type": "INTEGER"
-              },
-              {
-                "mode": "NULLABLE",
-                "name": "DE",
-                "type": "INTEGER"
-              },
-              {
-                "mode": "NULLABLE",
-                "name": "DP",
-                "type": "INTEGER"
-              },
-              {
-                "mode": "NULLABLE",
-                "name": "FT",
-                "type": "INTEGER"
-              },
-              {
-                "mode": "NULLABLE",
-                "name": "GS",
-                "type": "INTEGER"
-              },
-              {
-                "mode": "NULLABLE",
-                "name": "FS",
-                "type": "INTEGER"
-              },
-              {
-                "mode": "NULLABLE",
-                "name": "CV",
-                "type": "INTEGER"
-              },
-              {
-                "mode": "NULLABLE",
-                "name": "I",
-                "type": "INTEGER"
-              },
-              {
-                "mode": "NULLABLE",
-                "name": "PC",
-                "type": "INTEGER"
-              },
-              {
-                "mode": "NULLABLE",
-                "name": "CA",
-                "type": "INTEGER"
-              },
-              {
-                "mode": "NULLABLE",
-                "name": "FF",
-                "type": "INTEGER"
-              },
-              {
-                "mode": "NULLABLE",
-                "name": "PP",
-                "type": "INTEGER"
-              },
-              {
-                "mode": "NULLABLE",
-                "name": "FC",
-                "type": "INTEGER"
-              },
-              {
-                "mode": "NULLABLE",
-                "name": "DS",
-                "type": "INTEGER"
-              },
-              {
-                "mode": "NULLABLE",
-                "name": "FD",
-                "type": "INTEGER"
-              },
-              {
-                "mode": "NULLABLE",
-                "name": "SG",
-                "type": "INTEGER"
-              }
-            ],
-            "mode": "NULLABLE",
-            "name": "mandante",
-            "type": "RECORD"
-          },
-          {
-            "fields": [
-              {
-                "mode": "NULLABLE",
-                "name": "GC",
-                "type": "FLOAT"
-              },
-              {
-                "mode": "NULLABLE",
-                "name": "PS",
-                "type": "FLOAT"
-              },
-              {
-                "mode": "NULLABLE",
-                "name": "A",
-                "type": "FLOAT"
-              },
-              {
-                "mode": "NULLABLE",
-                "name": "G",
-                "type": "FLOAT"
-              },
-              {
-                "mode": "NULLABLE",
-                "name": "DE",
-                "type": "FLOAT"
-              },
-              {
-                "mode": "NULLABLE",
-                "name": "DP",
-                "type": "FLOAT"
-              },
-              {
-                "mode": "NULLABLE",
-                "name": "FT",
-                "type": "FLOAT"
-              },
-              {
-                "mode": "NULLABLE",
-                "name": "GS",
-                "type": "FLOAT"
-              },
-              {
-                "mode": "NULLABLE",
-                "name": "FS",
-                "type": "FLOAT"
-              },
-              {
-                "mode": "NULLABLE",
-                "name": "CV",
-                "type": "FLOAT"
-              },
-              {
-                "mode": "NULLABLE",
-                "name": "FF",
-                "type": "FLOAT"
-              },
-              {
-                "mode": "NULLABLE",
-                "name": "PP",
-                "type": "FLOAT"
-              },
-              {
-                "mode": "NULLABLE",
-                "name": "FC",
-                "type": "FLOAT"
-              },
-              {
-                "mode": "NULLABLE",
-                "name": "DS",
-                "type": "FLOAT"
-              },
-              {
-                "mode": "NULLABLE",
-                "name": "PC",
-                "type": "FLOAT"
-              },
-              {
-                "mode": "NULLABLE",
-                "name": "CA",
-                "type": "FLOAT"
-              },
-              {
-                "mode": "NULLABLE",
-                "name": "I",
-                "type": "FLOAT"
-              },
-              {
-                "mode": "NULLABLE",
-                "name": "FD",
-                "type": "FLOAT"
-              },
-              {
-                "mode": "NULLABLE",
-                "name": "SG",
-                "type": "FLOAT"
-              }
-            ],
-            "mode": "NULLABLE",
-            "name": "media",
-            "type": "RECORD"
-          }
-        ],
-        "mode": "NULLABLE",
-        "name": "scouts",
-        "type": "RECORD"
-      },
-      {
-        "mode": "NULLABLE",
-        "name": "minutos_jogados",
-        "type": "INTEGER"
-      },
-      {
-        "mode": "NULLABLE",
-        "name": "media_pontos_visitante",
-        "type": "FLOAT"
-      },
-      {
-        "mode": "NULLABLE",
-        "name": "media_minutos_jogados",
-        "type": "INTEGER"
-      },
-      {
-        "mode": "NULLABLE",
-        "name": "media_pontos_mandante",
-        "type": "FLOAT"
-      }
-    ],
-    "mode": "NULLABLE",
-    "name": "gato_mestre",
-    "type": "RECORD"
-  },
-  {
-    "mode": "NULLABLE",
-    "name": "clube_id",
+    "name": "campeonato_id",
     "type": "INTEGER"
   },
   {
     "mode": "NULLABLE",
-    "name": "media_num",
-    "type": "FLOAT"
+    "name": "timestamp",
+    "type": "INTEGER"
   },
   {
     "mode": "NULLABLE",
-    "name": "nome",
-    "type": "STRING"
+    "name": "clube_casa_id",
+    "type": "INTEGER"
   },
   {
     "mode": "NULLABLE",
-    "name": "jogos_num",
+    "name": "partida_id",
     "type": "INTEGER"
   },
   {
@@ -396,144 +36,84 @@
   },
   {
     "mode": "NULLABLE",
-    "name": "variacao_num",
-    "type": "FLOAT"
+    "name": "inicio_cronometro_tr",
+    "type": "STRING"
   },
   {
     "mode": "NULLABLE",
-    "name": "rodada_id",
+    "name": "periodo_tr",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "local",
+    "type": "STRING"
+  },
+  {
+    "mode": "REPEATED",
+    "name": "aproveitamento_mandante",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "clube_casa_posicao",
     "type": "INTEGER"
   },
   {
     "mode": "NULLABLE",
-    "name": "status_id",
-    "type": "INTEGER"
+    "name": "placar_oficial_mandante",
+    "type": "STRING"
   },
   {
     "mode": "NULLABLE",
-    "name": "preco_num",
-    "type": "FLOAT"
+    "name": "status_cronometro_tr",
+    "type": "STRING"
   },
   {
     "mode": "NULLABLE",
-    "name": "posicao_id",
-    "type": "INTEGER"
+    "name": "status_transmissao_tr",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "placar_oficial_visitante",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "partida_data",
+    "type": "TIMESTAMP"
   },
   {
     "fields": [
       {
         "mode": "NULLABLE",
-        "name": "GC",
-        "type": "INTEGER"
+        "name": "url",
+        "type": "STRING"
       },
       {
         "mode": "NULLABLE",
-        "name": "V",
-        "type": "INTEGER"
-      },
-      {
-        "mode": "NULLABLE",
-        "name": "PS",
-        "type": "INTEGER"
-      },
-      {
-        "mode": "NULLABLE",
-        "name": "A",
-        "type": "INTEGER"
-      },
-      {
-        "mode": "NULLABLE",
-        "name": "G",
-        "type": "INTEGER"
-      },
-      {
-        "mode": "NULLABLE",
-        "name": "DE",
-        "type": "INTEGER"
-      },
-      {
-        "mode": "NULLABLE",
-        "name": "DP",
-        "type": "INTEGER"
-      },
-      {
-        "mode": "NULLABLE",
-        "name": "FT",
-        "type": "INTEGER"
-      },
-      {
-        "mode": "NULLABLE",
-        "name": "GS",
-        "type": "INTEGER"
-      },
-      {
-        "mode": "NULLABLE",
-        "name": "FS",
-        "type": "INTEGER"
-      },
-      {
-        "mode": "NULLABLE",
-        "name": "CV",
-        "type": "INTEGER"
-      },
-      {
-        "mode": "NULLABLE",
-        "name": "PC",
-        "type": "INTEGER"
-      },
-      {
-        "mode": "NULLABLE",
-        "name": "CA",
-        "type": "INTEGER"
-      },
-      {
-        "mode": "NULLABLE",
-        "name": "I",
-        "type": "INTEGER"
-      },
-      {
-        "mode": "NULLABLE",
-        "name": "SG",
-        "type": "INTEGER"
-      },
-      {
-        "mode": "NULLABLE",
-        "name": "FD",
-        "type": "INTEGER"
-      },
-      {
-        "mode": "NULLABLE",
-        "name": "FF",
-        "type": "INTEGER"
-      },
-      {
-        "mode": "NULLABLE",
-        "name": "PP",
-        "type": "INTEGER"
-      },
-      {
-        "mode": "NULLABLE",
-        "name": "FC",
-        "type": "INTEGER"
-      },
-      {
-        "mode": "NULLABLE",
-        "name": "DS",
-        "type": "INTEGER"
+        "name": "label",
+        "type": "STRING"
       }
     ],
     "mode": "NULLABLE",
-    "name": "scout",
+    "name": "transmissao",
     "type": "RECORD"
   },
   {
     "mode": "NULLABLE",
-    "name": "pontos_num",
+    "name": "clube_visitante_id",
     "type": "INTEGER"
   },
   {
     "mode": "NULLABLE",
-    "name": "atleta_id",
+    "name": "clube_visitante_posicao",
     "type": "INTEGER"
+  },
+  {
+    "mode": "REPEATED",
+    "name": "aproveitamento_visitante",
+    "type": "STRING"
   }
 ]
