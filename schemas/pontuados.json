@@ -115,6 +115,11 @@
         "mode": "NULLABLE",
         "name": "PP",
         "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "DP",
+        "type": "INTEGER"
       }
     ],
     "mode": "NULLABLE",

@@ -39,7 +39,7 @@
   {
     "mode": "NULLABLE",
     "name": "nome",
-    "type": "DATE"
+    "type": "STRING"
   },
   {
     "mode": "NULLABLE",
