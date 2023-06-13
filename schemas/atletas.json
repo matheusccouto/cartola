@@ -529,7 +529,7 @@
   {
     "mode": "NULLABLE",
     "name": "pontos_num",
-    "type": "INTEGER"
+    "type": "FLOAT"
   },
   {
     "mode": "NULLABLE",
