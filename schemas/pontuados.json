@@ -120,6 +120,11 @@
         "mode": "NULLABLE",
         "name": "DP",
         "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "GC",
+        "type": "INTEGER"
       }
     ],
     "mode": "NULLABLE",
