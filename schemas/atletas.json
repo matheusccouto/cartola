@@ -520,6 +520,11 @@
         "mode": "NULLABLE",
         "name": "DS",
         "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "PI",
+        "type": "INTEGER"
       }
     ],
     "mode": "NULLABLE",
@@ -535,5 +540,10 @@
     "mode": "NULLABLE",
     "name": "atleta_id",
     "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "entrou_em_campo",
+    "type": "BOOLEAN"
   }
 ]
