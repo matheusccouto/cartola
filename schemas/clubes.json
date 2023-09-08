@@ -50,5 +50,10 @@
     "mode": "NULLABLE",
     "name": "id",
     "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "slug",
+    "type": "STRING"
   }
 ]
