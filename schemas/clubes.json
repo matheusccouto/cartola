@@ -55,5 +55,10 @@
     "mode": "NULLABLE",
     "name": "slug",
     "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "apelido",
+    "type": "STRING"
   }
 ]
