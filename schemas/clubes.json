@@ -60,5 +60,10 @@
     "mode": "NULLABLE",
     "name": "apelido",
     "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "url_editoria",
+    "type": "STRING"
   }
 ]
