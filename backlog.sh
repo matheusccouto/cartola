@@ -1,7 +1,7 @@
 #!/bin/bash
 
-S3_URI="s3://cartola-main/atletas/mercado"
-GCS_URI="gs://cartola/atletas/mercado/atletas"
+S3_URI="s3://cartola-main/atletas/pontuados"
+GCS_URI="gs://cartola/atletas/pontuados/pontuados"
 KEY="atletas"
 
 aws s3 sync $S3_URI ./backlog --exclude "*" --include "*.json"
@@ -24,23 +24,26 @@ for file in backlog/*.json; do
     ROUND="${ROUND#"${ROUND%%[1-9]*}"}"  # Remove leading zero
 
     # Use jq to update the JSON and overwrite the original file
-    jq .atletas $file | \  # FIXME
+    jq .atletas $file | \
+    jq 'to_entries | map({atleta_id: .key} + .value)' | \
     jq --arg S $SEASON --arg R $ROUND 'map(. + {"_temporada": $S, "_rodada": $R})' | \
     jq -c '.[]' > "${file}.tmp"
 
-    # mv "${file}.tmp" "$file"
+    mv "${file}.tmp" "$file"
 
 done
 
 
-# # Overwrite the AWS files with the existing from GCP
-# gsutil -m cp -r  $GCS_URI/*.json backlog
+# Overwrite the AWS files with the existing from GCP
+gsutil -m cp -r  $GCS_URI/*.json backlog
 
 
-# # Iterate through all the JSON files that match the pattern
-# for file in backlog/*.json; do
+# Iterate through all the JSON files that match the pattern
+for file in backlog/*.json; do
 
-#     # Get the base filename without the directory
-#     base=$(basename "$file")
+    # Get the base filename without the directory
+    base=$(basename "$file")
 
-#     gcloud storage cp $file $GCS_URI/$base.json
+    gcloud storage cp $file $GCS_URI/$base
+
+done

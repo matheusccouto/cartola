@@ -130,6 +130,11 @@
         "mode": "NULLABLE",
         "name": "GC",
         "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "PI",
+        "type": "INTEGER"
       }
     ],
     "mode": "NULLABLE",
