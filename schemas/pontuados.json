@@ -1,6 +1,11 @@
 [
   {
     "mode": "NULLABLE",
+    "name": "atleta_id",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
     "name": "_rodada",
     "type": "INTEGER"
   },

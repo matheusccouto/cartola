@@ -100,3 +100,7 @@ gcloud projects add-iam-policy-binding ${PROJECT_ID} \
   --member="serviceAccount:${SERVICE_ACCOUNT}@${PROJECT_ID}.iam.gserviceaccount.com" \
   --role="roles/bigquery.dataEditor" \
   --role="roles/bigquery.jobUser"
+
+bq update \
+    --source access.json \
+    matheusccouto:cartola

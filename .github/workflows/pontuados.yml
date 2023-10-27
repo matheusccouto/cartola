@@ -16,6 +16,6 @@ jobs:
     uses: ./.github/workflows/etl.yml
     with:
       endpoint: atletas/pontuados
-      filter: .atletas
+      filter: ".atletas | jq 'to_entries | map({atleta_id: .key} + .value)'"
       table: pontuados
       schema: schemas/pontuados.json

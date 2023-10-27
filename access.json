@@ -1,0 +1,24 @@
+{
+  "access": [
+    {
+      "role": "OWNER",
+      "userByEmail": "matheusccouto@gmail.com"
+    },
+    {
+      "role": "OWNER",
+      "specialGroup": "projectOwners"
+    },
+    {
+      "role": "WRITER",
+      "specialGroup": "projectWriters"
+    },
+    {
+      "role": "READER",
+      "specialGroup": "projectReaders"
+    },
+    {
+      "role": "READER",
+      "userByEmail": "github-palpiteiro-data@palpiteiro-dev.iam.gserviceaccount.com"
+    }
+  ]
+}
