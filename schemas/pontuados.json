@@ -145,6 +145,11 @@
         "mode": "NULLABLE",
         "name": "PE",
         "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "RB",
+        "type": "INTEGER"
       }
     ],
     "mode": "NULLABLE",
