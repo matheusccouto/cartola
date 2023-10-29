@@ -135,6 +135,11 @@
         "mode": "NULLABLE",
         "name": "PI",
         "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "DD",
+        "type": "INTEGER"
       }
     ],
     "mode": "NULLABLE",
