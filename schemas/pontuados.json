@@ -140,6 +140,11 @@
         "mode": "NULLABLE",
         "name": "DD",
         "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "PE",
+        "type": "INTEGER"
       }
     ],
     "mode": "NULLABLE",
