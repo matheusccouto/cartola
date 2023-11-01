@@ -129,6 +129,11 @@
                 "mode": "NULLABLE",
                 "name": "SG",
                 "type": "INTEGER"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "PE",
+                "type": "INTEGER"
               }
             ],
             "mode": "NULLABLE",

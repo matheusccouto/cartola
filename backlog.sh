@@ -1,7 +1,7 @@
 #!/bin/bash
 
-S3_URI="s3://cartola-main/atletas/pontuados"
-GCS_URI="gs://cartola/atletas/pontuados/pontuados"
+S3_URI="s3://cartola-main/atletas/mercado"
+GCS_URI="gs://cartola/atletas/mercado/atletas"
 KEY="atletas"
 
 aws s3 sync $S3_URI ./backlog --exclude "*" --include "*.json"
@@ -24,9 +24,8 @@ for file in backlog/*.json; do
     ROUND="${ROUND#"${ROUND%%[1-9]*}"}"  # Remove leading zero
 
     # Use jq to update the JSON and overwrite the original file
-    jq .atletas $file | \
-    jq 'to_entries | map({atleta_id: .key} + .value)' | \
-    jq --arg S $SEASON --arg R $ROUND 'map(. + {"_temporada": $S, "_rodada": $R})' | \
+    jq .atletas $file |
+    jq --arg S $SEASON --arg R $ROUND 'map(. + {"_temporada": $S, "_rodada": $R})' |
     jq -c '.[]' > "${file}.tmp"
 
     mv "${file}.tmp" "$file"
