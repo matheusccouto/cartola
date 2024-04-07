@@ -19,6 +19,10 @@
     {
       "role": "READER",
       "userByEmail": "github-palpiteiro-data@palpiteiro-dev.iam.gserviceaccount.com"
+    },
+    {
+      "role": "READER",
+      "userByEmail": "github-palpiteiro-predict@palpiteiro-dev.iam.gserviceaccount.com"
     }
   ]
 }
